@@ -1,0 +1,516 @@
+
+VER SE SISTEMA E 32 OU 64 BITS
+
+uname -m
+
+------------------------------------------------
+QUAL A VERSÃO DO UBUNTU
+
+lsb_release -a
+
+cat /etc/upstream-release/lsb-release 
+
+cat /proc/cpuinfo | grep flags
+--------------------------------------------------------------------------------------------------------
+64BITS XAMP
+
+wget https://ufpr.dl.sourceforge.net/project/xampp/XAMPP%20Linux/7.2.1/xampp-linux-x64-7.2.1-0-installer.run -O xampp-installer.run
+
+chmod +x xampp-installer.run
+
+sudo ./xampp-installer.run
+
+echo -e '[Desktop Entry]\n Version=1.0\n Name=xampp\n Exec=gksudo /opt/lampp/manager-linux-x64.run\n Icon=/opt/lampp/icons/world1.png\n Type=Application\n Categories=Application' | sudo tee /usr/share/applications/xampp.desktop
+
+
+-------------------------------------------------------------------------------------------------------
+
+HISTORICO DE COMANDOS LINUX
+
+$ history
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+sudo apt-get install gksu
+----------------------------------------------------------------------------------------------------
+
+
+ 
+
+mysql  oracle
+
+
+# echo -e "deb http://repo.mysql.com/apt/debian/ stretch mysql-5.7\ndeb-src http://repo.mysql.com/apt/debian/ stretch mysql-5.7" > /etc/apt/sources.list.d/mysql.list
+
+# wget -O /tmp/RPM-GPG-KEY-mysql https://repo.mysql.com/RPM-GPG-KEY-mysql --no-check-certificate
+# apt-key add /tmp/RPM-GPG-KEY-mysql
+
+# apt update
+# apt install mysql-server
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+VER IP
+
+hostname -I
+
+------------------------------------------------------------------------------------------------------------
+
+ONDE ESTA INSTALADO
+
+which python
+
+-----------------------------------------------------------------------------------------------------------
+
+lembrar aonde o bash esta instalado
+
+hash -d pip3
+
+----------------------------------------------
+
+
+
+
+RESTAURAR SOM 
+
+
+sudo alsa force-reload
+
+sudo apt-get remove --purge alsa-base pulseaudio
+
+sudo apt-get install alsa-base pulseaudio
+
+Find Your Audio Device
+
+lspci -v | grep  -i audio
+
+
+
+$ pulseaudio -k
+ $ pulseaudio --start
+
+
+udo apt-get install pulseaudio pulseeffects
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ver no terminal informaçoes do computador
+
+screenfetch
+
+
+--------------------------------------------------------------------
+
+
+
+PLACA DE VIDEO
+
+
+lspci | grep VGA
+
+
+--------------------------------------------------------------------
+
+LIMPAR LIXEIRA
+
+sudo rm -rf $HOME/.local/share/Trash/*
+
+----------------------------------------------------------------------------
+TRADUÇÃO NO SHELL
+
+shell google dicionarie linux transtalion
+trans -e google -s en -t pt -show-original y -show-original-phonetics n -show-translation y -no-ansi -show-translation-phonetics n -show-prompt-message n -show-languages y -show-original-dictionary n -show-dictionary n -show-alternatives n "%GDWORD%"
+
+trans -e google -s pt -t en -show-original y -show-original-phonetics n -show-translation y -no-ansi -show-translation-phonetics n -show-prompt-message n -show-languages y -show-original-dictionary n -show-dictionary n -show-alternatives n "%GDWORD%"
+
+
+trans -e google -s pt -t en "%GDWORD%"
+
+trans -b -p :en "%GDWORD%"
+
+
+https://github.com/soimort/translate-shell
+
+
+trans -download-audio-as zzzzzzzzzzzzzzzzz.mp3 -b -p :en "texto" 
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+GIMP Resynthesizer
+
+apt-get install gimp-resynthesizer
+sudo apt install gimp-plugin-registry 
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+$ rarcrack --type rar archive.rar
+
+rarcrack --type zip --threads 4 archive.rar
+-------------------------------------------------------------------------
+número máximo de threads
+sudo lshw | grep thread
+
+
+-------------------------------------------------------------------------------
+
+cpuinfo - Verificando CPU e Core
+
+
+Utilize os comandos:
+
+
+
+Quantas CPUs físicas eu tenho em minha máquina?
+
+# cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l
+
+Quantos Cores eu tenho em minha máquina?
+
+# cat /proc/cpuinfo | egrep "core id|physical id" | tr -d "\n" | sed s/physical/\\nphysical/g | grep -v ^$ | sort | uniq | wc -l
+
+Qual a proporção de quantidade CPU x Cores?
+
+# cat /proc/cpuinfo | egrep "core id|physical id"
+
+-----------------------------------------------------------------------------------
+instalar .deb
+
+sudo dpkg -i ????????.deb
+
+----------------------------------------------------------------------------------
+
+ Execute o comando abaixo no terminal como usuário comum.
+
+    alias pkexec='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
+
+Feito isso basta usar o pkexec como utilizaria o gksu, veja o exemplo para abrir o gerenciador de arquivos Thunar.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+configuração do relogio
+
+%A  , %d de %B de %Y%n%H:%M:%S   (%h = %m)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+wxFormBuilder
+
+sudo apt install libwxgtk3.0-dev libwxgtk-media3.0-dev meson
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Customizando a aparência do seu prompt de comando (Variável PS1)
+
+export PS1="\e[32;1m\u \e[33;1m→ \e[36;1m\h \e[37;0m\w\n \e[35;1m⚡\e[m"
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+arp-scan -I wlp8s0 -l
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+¡½¾¾¼⅜¨⅞™±°¿˛×÷ ̇¿¬¹²³£¢¬{[]]]]]]}}}}}}}}\§§°°°°̣ ̣·µµN”“©»««ÆßÐĐŊĦˀĸŁ´´~ººª´ÞØ→↓←Ŧ®°???????????
+Teclas Pressionadas 	Caractere Gerado
+Alt Gr + Shift + ? 	¿
+Alt Gr + Shift + ! 	¡
+Alt Gr + Shift + > 	÷
+Alt Gr + Shift + < 	×
+Alt Gr + Shift + } 	º
+Alt Gr + Shift + { 	¯
+Alt Gr + Shift + ( 	±
+Alt Gr + Shift + $ 	¼
+Alt Gr + Shift + # 	¾
+Alt Gr + Shift + @ 	½
+Alt Gr + Shift + " 	¬
+Alt Gr + 1 	¹
+Alt Gr + 2 	²
+Alt Gr + 3 	³
+Alt Gr + 4 	£
+Alt Gr + 5 	¢
+Alt Gr + [ 	ª
+Alt Gr + ] 	º
+Alt Gr + / 	°
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+apt-get install cmatrix  
+
+cmatrix
+
+
+
+
+Escreva ao contrário
+
+No Terminal, execute o comando rev. Depois, digite qualquer frase e pressione Enter para ver como ela fica escrita de trás para frente.
+
+
+
+--------------------------------------------------------------------------------
+emulador megadrive
+
+https://launchpad.net/~hda-me/+archive/ubuntu/blastem
+
+https://segaretro.org/Gens/GS
+
+
+
+sudo add-apt-repository ppa:hda-me/blastem
+sudo apt-get update
+
+
+
+-----------------------------------------------
+serial port 
+        
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+http://cutecom.sourceforge.net/
+https://help.ubuntu.com/community/Cutecom
+
+sudo apt-get update
+sudo apt-get install cutecom
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Repetição automática de comando
+
+
+Um comando muito útil é o watch.
+
+Ele serve para atualizar um comando em um determinado tempo especificado.
+
+Por exemplo, você esta copiando um arquivo para seu PC, via scp, e fica dando o "ls -lah" para ver o quanto já está copiado. Você pode fazer isso via o watch.
+
+Sintaxe:
+
+# watch --interval 0 'ls -lah'
+
+O comando acima lhe dará automaticamente de 0 em 0 segundos o resultado do seu comando.
+
+Explicando:
+
+    --interval 0 - Atualizar de 0 em 0 segundos (intervalo de repetição);
+    'ls -lah' - comando a ser repetido.
+
+    No caso, usei "ls -lah", mas você pode usar qualquer comando, du, cat etc.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Nmap – Network Mapper
+
+# apt install nmap 
+
+
+Encontrar hosts ativos na rede
+
+
+
+# sudo nmap -sP 192.168.1.1/24
+
+
+
+Identificar sistema operacional
+
+
+# sudo nmap -O 192.168.1.1/24
+
+
+Identificar hostnames
+
+
+
+# sudo nmap -sL 192.168.1.1/24
+
+
+A ferramenta zenmap é a versão gráfica do nmap:
+
+
+# apt-get install zenmap
+
+
+Inventário de todas as máquinas de uma determinada rede
+
+ nmap -sS -O -T3 -oA invent 192.168.1.0/24
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Angry IP scanner 
+
+https://angryip.org/
+
+https://github.com/angryip/ipscan/releases/download/3.7.6/ipscan_3.7.6_amd64.deb
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------=
+
+VIM
+
+:q 	    sai do vim
+:q! 	sai do vim sem salvar
+:wq 	grava as alterações realizas e sai
+:x 	    grava as alterações e sai
+:qa 	para sair de todas as edições em curso
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Auto-complete em Python no editor Vim
+
+ sudo apt install vim-python-jedi
+
+
+
+
+https://github.com/davidhalter/jedi-vim
+
+
+Feito isso, verifique se o plugin encontra-se em sua lista de plugins disponíveis:
+
+vim-addons list
+
+Em seguida instale-o para o usuário corrente:
+
+vim-addons install python-jedi
+
+Principais comandos:
+
+    Ctrl + espaço :: auto-completa
+    \ + n :: mostra todas as ocorrências do item selecionado no código
+    \ + r :: renomeia o item selecionado (variável, função ou classe) em todo o código
+    K (k maiúsculo) :: mostra a documentação Pydoc da função
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+comandos ssh
+
+scp -r examples francivaldo@192.168.1.10:/home/francivaldo/xxx
+
+
+scp -r demo.py francivaldo@192.168.1.3:/home/francivaldo/Documentos/
+
+
+scp -r demo.py francivaldo@192.168.1.3:/home/francivaldo/luma.examples
+
+
+scp -r set.ttf root@192.168.1.4:/home/francivaldo/luma.examples/examples/images
+
+
+-Edit the sshd_config file.
+
+#sudo nano /etc/ssh/sshd_config
+
+-Set the PermitRootLogin to Yes
+
+PermitRootLogin Yes
+
+-Restart the SSH service.
+
+#sudo systemctl restart ssh
+
+   
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSTALAR PIP PYTHON
+
+Debian/Ubuntu
+
+>>> Python 2:
+
+    sudo apt install python-pip
+
+>>>Python 3:
+
+    sudo apt install python3-venv python3-pip
+
+ >>>   To upgrade your pip3, try running:
+
+    sudo -H pip3 install --upgrade pip
+
+ >>>   To upgrade pip as well, you can follow it by:
+
+    sudo -H pip2 install --upgrade pip
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+sleep NUMBER[SUFFIX]...
+
+
+
+The NUMBER may be a positive integer or a floating-point number.
+
+The SUFFIX may be one of the following:
+
+    s - seconds (default)
+    m - minutes
+    h - hours
+    d - days
+
+When no suffix is specified, it defaults to seconds.
+
+Sleep for 2 minute and 30 seconds:
+
+sleep 2m 30s
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Tab  (auto-completar)
+2. Ctrl c  (interrompe um programa)
+3. Ctrl z   (segundo plano)
+4. Ctrl d   (desconexão)
+5. Ctrl L   (limpa o terminal)
+6. Ctrl a  (move p/ inicio da linha)
+7. Ctrl e  (move p/ final da linha)
+8. Ctrl u  (apaga a linha)
+9. Ctrl k  (apaga do cursor em diante) 
+10. Ctrl w  (apaga uma palavra)
+11. Ctrl y  (cola de volta) Isto irá colar o texto apagado que você viu com os atalhos Ctrl + W, Ctrl + U e Ctrl + K
+12. Ctrl p  (comando anterior)
+13. Ctrl n  (próximo comando)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+REBOOT REDE
+
+ifconfig eth0 down && ifconfig eth0 up
+
+sudo /etc/init.d/networking restart
+
+ou
+
+ifdown eth0
+ifup eth0
+
+# ifdown eth0
+# ifup eth0
+
+arp -a vai retornar o ip e o Mac 
+
