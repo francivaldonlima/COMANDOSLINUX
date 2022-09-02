@@ -1,0 +1,61 @@
+idf.py -p /dev/ttyUSB0 flash monitor
+
+sudo apt update && sudo apt upgrade -y
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+
+sudo apt install -y python3-pip
+
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+
+sudo apt install -y git wget flex bison gperf python-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util
+
+cd ~
+
+mkdir esp
+
+cd esp
+
+git clone --recursive https://github.com/espressif/esp-idf.git
+
+cd esp-idf
+
+. ./install.sh
+
+pip install --upgrade pip
+
+. ./export.sh
+
+nano ~/.profile
+
+Append next line to ~/.profile script:
+
+. $HOME/esp/esp-idf/export.sh
+
+To save press CTRL+X, Y, ENTER
+
+sudo usermod -a -G dialout,tty $USER
+
+Restart machine. If you are on virtual machine then shutdown completely and start it again.
+
+ls /dev/ttyUSB*
+
+cd ~/Desktop
+
+cp -r $IDF_PATH/examples/get-started/hello_world .
+
+cd hello_world
+
+idf.py set-target esp32
+
+idf.py menuconfig
+
+idf.py build
+
+Put ESP32 into programming mode.
+
+idf.py -p /dev/ttyUSB0 flash
+
+idf.py monitor
+
+To exit monitor press CTRL+]
