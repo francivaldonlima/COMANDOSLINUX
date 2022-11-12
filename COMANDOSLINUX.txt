@@ -6,11 +6,13 @@ uname -m
 ------------------------------------------------
 QUAL A VERSÃO DO UBUNTU
 
+cat /etc/upstream-release/lsb-release
+
 lsb_release -a
 
-cat /etc/upstream-release/lsb-release 
-
 cat /proc/cpuinfo | grep flags
+
+
 --------------------------------------------------------------------------------------------------------
 64BITS XAMP
 
