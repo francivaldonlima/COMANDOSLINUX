@@ -505,3 +505,19 @@ ifup eth0
 
 arp -a vai retornar o ip e o Mac 
 
+*************************************************************************************
+Atualizar programas Snap
+
+# snap refresh
+
+# sudo snap refresh APLICACIÓN
+
+Liste as atualizações sem instalá-las
+#sudo snap refresh --list
+*************************************************************************************
+Atualizar programas Flatpak
+
+#flatpak update
+
+*************************************************************************************
+
