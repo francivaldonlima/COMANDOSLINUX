@@ -1,3 +1,9 @@
+------------------------------------------------
+ATUALIZALÃO DO SISTEMA
+
+sudo apt update && sudo apt upgrade -y
+
+------------------------------------------------
 
 VER SE SISTEMA E 32 OU 64 BITS
 
@@ -98,25 +104,13 @@ $ pulseaudio -k
 
 udo apt-get install pulseaudio pulseeffects
 
-
-
-
-
-
-
-
 ------------------------------------------------------------------------------------------------------------------------------------------
-
-
 ver no terminal informaçoes do computador
 
 screenfetch
 
 
 --------------------------------------------------------------------
-
-
-
 PLACA DE VIDEO
 
 
@@ -124,7 +118,6 @@ lspci | grep VGA
 
 
 --------------------------------------------------------------------
-
 LIMPAR LIXEIRA
 
 sudo rm -rf $HOME/.local/share/Trash/*
@@ -142,13 +135,9 @@ trans -e google -s pt -t en "%GDWORD%"
 
 trans -b -p :en "%GDWORD%"
 
-
-https://github.com/soimort/translate-shell
-
-
 trans -download-audio-as zzzzzzzzzzzzzzzzz.mp3 -b -p :en "texto" 
 
-
+https://github.com/soimort/translate-shell
 
 
 
