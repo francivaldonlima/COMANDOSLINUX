@@ -520,4 +520,16 @@ Atualizar programas Flatpak
 #flatpak update
 
 *************************************************************************************
+ATALHOS DO TECLADOS NO LINUX
+
+Ctrl + C (interrompe um programa)
+Ctrl + Z (segundo plano)
+Ctrl + D (desconexão)
+Ctrl + L (limpa o terminal)
+Ctrl + A (move p/ inicio da linha)
+Ctrl + E (move p/ final da linha)
+Ctrl + U (apaga a linha)
+Ctrl + K (apaga do cursor em diante)
+Ctrl + W (apaga uma palavra)
+
 
