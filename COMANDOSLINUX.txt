@@ -252,7 +252,7 @@ cmatrix
 Escreva ao contrário
 
 No Terminal, execute o comando rev. Depois, digite qualquer frase e pressione Enter para ver como ela fica escrita de trás para frente.
-
+echo 'Hello World!' | rev
 
 
 --------------------------------------------------------------------------------
