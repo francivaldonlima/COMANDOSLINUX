@@ -532,4 +532,9 @@ Ctrl + U (apaga a linha)
 Ctrl + K (apaga do cursor em diante)
 Ctrl + W (apaga uma palavra)
 
+******************************************************************************
+
+forçar instalação com pip
+
+pip install xxxxxxx --break-system-packages
 
