@@ -538,3 +538,20 @@ forçar instalação com pip
 
 pip install xxxxxxx --break-system-packages
 
+******************************************************************************
+VER A DATA DA BIOS
+
+cat /sys/class/dmi/id/bios_date
+
+*****************************************************************************
+VER PROCESSADOR
+
+ cat /proc/cpuinfo | grep "model name" | head -n 1
+
+sudo dmidecode --type processor
+
+lscpu
+
+
+*****************************************************************************
+
